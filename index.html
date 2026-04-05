@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Moda de Vanguarda S.A. - Sistema Interno</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="app-container" id="app">
+        <!-- Tela de Login -->
+        <div id="loginScreen" class="login-screen">
+            <div class="login-card">
+                <div class="login-header">
+                    <i class="fas fa-tshirt"></i>
+                    <h1>Moda de Vanguarda S.A.</h1>
+                    <p>Sistema de Gestão Integrada</p>
+                </div>
+                <div class="login-form">
+                    <div class="input-group">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="loginName" placeholder="Seu nome completo" autocomplete="off">
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <input type="password" id="loginPass" placeholder="Senha">
+                    </div>
+                    <button id="loginBtn" class="btn-primary">Entrar <i class="fas fa-arrow-right"></i></button>
+                    <div class="demo-creds">
+                        <small>🔑 Senhas: Colaborador = 123 | Gerente = 456 | Almoxarife = 789</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Painel Principal (oculto até login) -->
+        <div id="mainPanel" class="main-panel hidden">
+            <!-- Sidebar -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <i class="fas fa-tshirt"></i>
+                    <h3>Vanguarda</h3>
+                </div>
+                <nav class="sidebar-nav" id="sidebarNav">
+                    <!-- Abas dinâmicas via JS -->
+                </nav>
+                <div class="sidebar-footer">
+                    <button id="themeToggle" class="theme-toggle"><i class="fas fa-moon"></i> Tema</button>
+                    <button id="logoutBtn" class="logout-btn"><i class="fas fa-sign-out-alt"></i> Sair</button>
+                </div>
+            </aside>
+
+            <!-- Conteúdo principal -->
+            <main class="main-content">
+                <div class="top-bar">
+                    <div class="user-info">
+                        <i class="fas fa-user-circle"></i>
+                        <span id="currentUserName"></span>
+                        <small id="currentUserRole"></small>
+                    </div>
+                </div>
+                <div id="dynamicContent" class="dynamic-content">
+                    <!-- Conteúdo de cada aba será renderizado aqui -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
